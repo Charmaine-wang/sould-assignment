@@ -1,8 +1,4 @@
 export const theme = {
-	colorBlue: '#181818',
-	colorLight: '#fff',
-	colorPrimary: '#ca8140',
-
 	color: {
 		blue: '#203C89',
 		accent: '#FFD2DA',

@@ -9,11 +9,21 @@ const StyledCarGallery = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	border-bottom: 1px solid ${({ theme }) => theme.color.darkGray};
 
 	div {
 		display: flex;
-		margin-bottom: 16px;
 	}
+	/* hr {
+		color: red;
+		width: 100%;
+	} */
+`;
+
+const StyledViewAll = styled.div`
+	background-color: transparent;
+	align-self: flex-end;
+	margin-bottom: 20px;
 `;
 
 export const CarGallery = () => {
@@ -37,6 +47,8 @@ export const CarGallery = () => {
 				<Button label="Volvo" btnWidth="168px" />
 			</div>
 			<Button label="Visa bilar" typestyle="dark" />
+			<StyledViewAll>Se alla bilar i lager</StyledViewAll>
+			{/* <hr /> */}
 		</StyledCarGallery>
 	);
 };

@@ -12,6 +12,10 @@ const StyledCard = styled.div`
 	border-radius: 10px;
 	padding: 48px 0 16px;
 	margin: 0 12px;
+
+	> p {
+		color: ${({ theme }) => theme.color.darkPrimary};
+	}
 `;
 
 export const Card = ({ imgUrl, label }) => {

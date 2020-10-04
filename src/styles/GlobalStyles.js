@@ -14,9 +14,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-      font-size: 100px;
-      line-height: 100px;
-      color: ${theme.color.darkPrimary};
+    font-size: 100px;
+    line-height: 100px;
+    color: ${theme.color.darkPrimary};
+    margin: 120px 0 100px;
+
   }
 
   h2 {
