@@ -11,7 +11,7 @@ const DefaultButton = styled.button`
 	border-radius: 5px;
 	border-color: ${({ theme }) => theme.color.darkGray};
 	border-style: solid;
-	margin: 0 12px;
+	margin: 30px 12px 18px;
 	:focus,
 	:active {
 		outline: none;

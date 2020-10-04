@@ -7,12 +7,31 @@ const StyledHero = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+
+	> h1 {
+		margin-bottom: 48px;
+	}
+
+	> h2 {
+		position: absolute;
+		bottom: 20px;
+	}
 `;
 const StyledbuttonWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	justify-content: center;
+`;
+
+const StyledImgText = styled.div`
+	position: absolute;
+	bottom: 60px;
+	right: 15%;
+	color: #fff;
+	width: 350px;
+	border-left: 1px solid #fff;
+	padding: 20px 0 0 48px;
 `;
 
 export const Hero = () => {
@@ -31,6 +50,10 @@ export const Hero = () => {
 				/>
 			</StyledbuttonWrapper>
 			<img src="/images/start.jpg" alt="" />
+			<StyledImgText>
+				<h2>Spetsa din roadtrip med nya sommardäck</h2>
+				<Button label="Köp däck" typestyle="light" />
+			</StyledImgText>
 		</StyledHero>
 	);
 };
