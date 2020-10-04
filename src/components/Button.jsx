@@ -4,14 +4,14 @@ import styled, { css } from 'styled-components';
 const DefaultButton = styled.button`
 	display: flex;
 	height: 45px;
-	width: ${({ btnWidth }) => (btnWidth ? btnWidth : '150px')};
+	width: ${({ btnWidth }) => (btnWidth ? btnWidth : '136px')};
 	justify-content: center;
 	align-items: center;
 	background-color: transparent;
 	border-radius: 5px;
 	border-color: ${({ theme }) => theme.color.darkGray};
 	border-style: solid;
-	margin-right: 10px;
+	margin: 0 12px;
 	:focus,
 	:active {
 		outline: none;
