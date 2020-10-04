@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledFooter = styled.div`
@@ -6,12 +6,6 @@ const StyledFooter = styled.div`
 `;
 
 export const Footer = () => {
-	const [myState, setmyState] = useState(null);
-
-	useEffect(() => {
-		console.log('mounted');
-	}, []);
-
 	return (
 		<StyledFooter>
 			<h1>Footer</h1>

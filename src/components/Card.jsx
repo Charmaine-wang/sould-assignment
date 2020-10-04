@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
@@ -15,12 +15,6 @@ const StyledCard = styled.div`
 `;
 
 export const Card = ({ imgUrl, label }) => {
-	const [myState, setmyState] = useState(null);
-
-	useEffect(() => {
-		console.log('mounted');
-	}, []);
-
 	return (
 		<StyledCard>
 			<img src={imgUrl} alt="" />

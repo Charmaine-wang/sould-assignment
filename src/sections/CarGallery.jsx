@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { Card } from '../components/Card';
@@ -17,12 +17,6 @@ const StyledCarGallery = styled.div`
 `;
 
 export const CarGallery = () => {
-	const [myState, setmyState] = useState(null);
-
-	useEffect(() => {
-		console.log('mounted');
-	}, []);
-
 	return (
 		<StyledCarGallery>
 			<h1>Hitta din nästa drömbil</h1>

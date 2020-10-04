@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Hero } from '../sections/Hero';
 import { CarGallery } from '../sections/CarGallery';
@@ -16,7 +16,7 @@ const StyledStartPage = styled.div`
 `;
 
 const StartPage = () => {
-	const [isClicked, setClicked] = useState(false);
+	// const [isClicked, setClicked] = useState(false);
 	return (
 		<StyledStartPage>
 			<Hero />

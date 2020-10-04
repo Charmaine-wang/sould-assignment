@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Button } from '../components/Button';
 
@@ -16,12 +16,6 @@ const StyledbuttonWrapper = styled.div`
 `;
 
 export const Hero = () => {
-	const [myState, setmyState] = useState(null);
-
-	useEffect(() => {
-		console.log('mounted');
-	}, []);
-
 	return (
 		<StyledHero>
 			<h1>Vi finns i din närhet</h1>
