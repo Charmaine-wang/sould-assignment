@@ -14,10 +14,6 @@ const StyledCarGallery = styled.div`
 	div {
 		display: flex;
 	}
-	/* hr {
-		color: red;
-		width: 100%;
-	} */
 `;
 
 const StyledViewAll = styled.div`

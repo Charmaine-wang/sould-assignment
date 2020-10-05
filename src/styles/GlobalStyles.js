@@ -3,6 +3,7 @@ import { theme } from './Theme';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url ('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
 
   *,*::before,*::after {
     box-sizing: border-box;
@@ -14,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
+    font-family: 'Roboto Slab', serif;
     font-size: 100px;
     line-height: 100px;
     color: ${theme.color.darkPrimary};

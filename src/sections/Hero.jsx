@@ -7,6 +7,7 @@ const StyledHero = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	width: 100%;
 
 	> h1 {
 		margin-bottom: 48px;
@@ -24,6 +25,15 @@ const StyledbuttonWrapper = styled.div`
 	justify-content: center;
 `;
 
+const StyledImageWrapper = styled.div`
+	margin-top: -160px;
+	> img {
+		mask: url('/images/clipPath.svg');
+		mask-repeat: no-repeat;
+		mask-size: cover;
+		width: 100%;
+	}
+`;
 const StyledImgText = styled.div`
 	position: absolute;
 	bottom: 60px;
@@ -49,11 +59,14 @@ export const Hero = () => {
 					typestyle="dark"
 				/>
 			</StyledbuttonWrapper>
-			<img src="/images/start.jpg" alt="" />
-			<StyledImgText>
-				<h2>Spetsa din roadtrip med nya sommardäck</h2>
-				<Button label="Köp däck" typestyle="light" />
-			</StyledImgText>
+			<StyledImageWrapper>
+				<img src="/images/start.jpg" alt="" />
+
+				<StyledImgText>
+					<h2>Spetsa din roadtrip med nya sommardäck</h2>
+					<Button label="Köp däck" typestyle="light" />
+				</StyledImgText>
+			</StyledImageWrapper>
 		</StyledHero>
 	);
 };
