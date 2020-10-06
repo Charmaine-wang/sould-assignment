@@ -8,6 +8,7 @@ const StyledVideoCard = styled.div`
 	background-color: black;
 	width: 100%;
 	height: 100%;
+	min-height: 380px;
 	border-radius: 20px;
 
 	&::before {
@@ -33,7 +34,6 @@ const StyledVideoCard = styled.div`
 export const VideoCard = () => {
 	return (
 		<StyledVideoCard>
-			{/* <img src="/images/car.jpg" alt="" /> */}
 			<h2>Följ med på vår roadtrip och filmserie genom Västverige</h2>
 		</StyledVideoCard>
 	);

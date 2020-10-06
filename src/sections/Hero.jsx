@@ -11,6 +11,9 @@ const StyledHero = styled.div`
 
 	> h1 {
 		margin-bottom: 48px;
+		@media screen and (max-width: 1024px) {
+			margin-bottom: 20px;
+		}
 	}
 
 	> h2 {
@@ -23,15 +26,20 @@ const StyledbuttonWrapper = styled.div`
 	flex-direction: row;
 	width: 100%;
 	justify-content: center;
+	z-index: 999;
 `;
 
 const StyledImageWrapper = styled.div`
-	margin-top: -160px;
+	margin-top: -140px;
 	> img {
 		mask: url('/images/clipPath.svg');
 		mask-repeat: no-repeat;
 		mask-size: cover;
 		width: 100%;
+	}
+
+	@media screen and (max-width: 1024px) {
+		margin-top: -120px;
 	}
 `;
 const StyledImgText = styled.div`
@@ -49,15 +57,8 @@ export const Hero = () => {
 		<StyledHero>
 			<h1>Vi finns i din närhet</h1>
 			<StyledbuttonWrapper>
-				<Button
-					// onClick={() => setClicked(!isClicked)}
-					label="Bilar i lager"
-				/>
-				<Button
-					// onClick={() => setClicked(!isClicked)}
-					label="Boka verkstad"
-					typestyle="dark"
-				/>
+				<Button label="Bilar i lager" />
+				<Button label="Boka verkstad" typestyle="dark" />
 			</StyledbuttonWrapper>
 			<StyledImageWrapper>
 				<img src="/images/start.jpg" alt="" />

@@ -7,22 +7,42 @@ const StyledFooter = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 140px;
+	padding: 0 120px;
 	justify-content: center;
 	width: 100%;
-	height: 328px;
 	margin: 80px 0;
-	> div {
-		width: 530px;
-		margin: 16px;
+
+	> span {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: 1200px) {
+			flex-direction: column;
+			align-items: center;
+			height: inherit;
+		}
+
+		> div {
+			width: 100%;
+			max-width: calc(50% - 8px);
+			height: auto;
+
+			@media screen and (max-width: 1200px) {
+				max-width: 80%;
+				margin-bottom: 16px;
+			}
+		}
 	}
 `;
 
 export const Footer = () => {
 	return (
 		<StyledFooter>
-			<BookingCard />
-			<VideoCard />
+			<span>
+				<BookingCard />
+				<VideoCard />
+			</span>
 		</StyledFooter>
 	);
 };

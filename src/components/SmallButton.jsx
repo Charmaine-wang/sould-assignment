@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledSmallButton = styled.button`
 	display: flex;
 	padding: 0 8px;
-	/* width: ${({ btnWidth }) => (btnWidth ? btnWidth : '72px')}; */
 	font-size: 12px;
 	justify-content: center;
 	align-items: center;
@@ -14,8 +13,11 @@ const StyledSmallButton = styled.button`
 	color: ${({ theme }) => theme.color.darkGray};
 	border-style: solid;
 	margin: 24px 2px 0;
+	transition: 0.075s;
+	cursor: pointer;
 	:focus,
-	:active {
+	:active,
+	:hover {
 		outline: none;
 		border-color: ${({ theme }) => theme.color.darkPrimary};
 		color: ${({ theme }) => theme.color.darkPrimary};

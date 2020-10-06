@@ -5,12 +5,13 @@ import { SmallButton } from './SmallButton';
 const StyledBookingCard = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 55px 48px;
+	padding: 55px 55px 55px 50px;
 	background-color: #eef1f4;
 	border-radius: 20px;
 
 	p {
 		color: ${({ theme }) => theme.color.darkGray};
+		margin-top: 50px;
 	}
 	> div {
 		display: flex;
@@ -35,12 +36,14 @@ const StyledForm = styled.form`
 
 	img {
 		align-self: flex-end;
+		margin-right: 20px;
 	}
 	input {
 		border-radius: 10px;
 		border: transparent;
 		outline: none;
-		width: 56px;
+		width: 100%;
+		max-width: 66px;
 		height: 88px;
 		margin: 0 4px;
 		font-size: 30px;
@@ -48,6 +51,7 @@ const StyledForm = styled.form`
 		text-align: center;
 		text-transform: uppercase;
 	}
+
 	input:nth-child(4) {
 		margin-right: 10px;
 	}

@@ -21,6 +21,12 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.color.darkPrimary};
     margin: 120px 0 100px;
 
+    	@media screen and (max-width: 1200px) {
+        margin: 80px 0 100px;
+        font-size: 70px;
+        line-height: 75px;
+	}
+
   }
 
   h2 {

@@ -9,32 +9,59 @@ const DefaultButton = styled.button`
 	align-items: center;
 	background-color: transparent;
 	border-radius: 5px;
-	border-color: ${({ theme }) => theme.color.darkGray};
+	border-color: ${({ active, theme }) =>
+		active ? theme.color.darkPrimary : theme.color.darkGray};
 	border-style: solid;
 	margin: 30px 12px 18px;
+	transition: 0.35s ease-in-out;
+	cursor: pointer;
 	:focus,
-	:active {
+	:active,
+	:hover {
 		outline: none;
-		border-color: ${({ theme }) => theme.color.darkPrimary};
 	}
 `;
 const LightButton = styled(DefaultButton)`
 	border-color: #fff;
 	color: #fff;
+	:focus,
+	:active,
+	:hover {
+		background-color: #fff;
+		color: ${({ theme }) => theme.color.darkPrimary};
+		outline: none;
+		opacity: 0.9;
+	}
 `;
 const DarkButton = styled(DefaultButton)`
 	background-color: ${({ theme }) => theme.color.darkPrimary};
-	border-color: ${({ theme }) => theme.color.darkPrimary};
 	color: #fff;
+	:focus,
+	:active,
+	:hover {
+		outline: none;
+	}
 `;
 
-export const Button = ({ typestyle, label, ...rest }) => {
+export const Button = ({ typestyle, label, active = false, ...rest }) => {
 	switch (typestyle) {
 		case 'light':
-			return <LightButton {...rest}>{label}</LightButton>;
+			return (
+				<LightButton {...rest} active={active}>
+					{label}
+				</LightButton>
+			);
 		case 'dark':
-			return <DarkButton {...rest}>{label} </DarkButton>;
+			return (
+				<DarkButton {...rest} active={active}>
+					{label}
+				</DarkButton>
+			);
 		default:
-			return <DefaultButton {...rest}>{label} </DefaultButton>;
+			return (
+				<DefaultButton {...rest} active={active}>
+					{label}
+				</DefaultButton>
+			);
 	}
 };
